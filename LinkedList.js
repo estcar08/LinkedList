@@ -62,10 +62,41 @@ class LinkedList {
     var current = null;
     for (var i = 0; i < count; i++) {
       current = temp;
-      temp = temp.next
+      temp = temp.next;
     }
     current.next = new_node;
     new_node.next = temp;
+  }
+
+  removeFirstNode() {
+    if (this.head == null) return null;
+    this.head = this.head.next;
+    return this.head;
+  }
+
+  removeLastNode() {
+    if (this.head == null) return null;
+
+    if (this.head.next == null) {
+      return null;
+    }
+
+    var second_last = this.head;
+    while (second_last.next.next != null) second_last = second_last.next;
+
+    second_last.next = null;
+
+    return this.head;
+  }
+
+  removeMidNode(){
+    if (this.head == null) return null;
+
+    if (this.head.next == null) {
+      return null;
+    }
+    var copyHead = this.head;
+    const count = this.getSize();
   }
 }
 
@@ -83,4 +114,3 @@ list.push(8);
 list.appendMid(7);
 
 list.printLL();
-
