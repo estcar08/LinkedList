@@ -1,0 +1,14 @@
+{
+  "name": "linkedlist",
+  "version": "1.0.0",
+  "description": "Linked List - Jest practice",
+  "main": "LinkedList.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "carlos estrella",
+  "license": "ISC",
+  "dependencies": {
+    "jest": "^27.4.2"
+  }
+}
